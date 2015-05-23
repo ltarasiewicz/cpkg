@@ -1,0 +1,3 @@
+[submodule "web/app/plugins"]
+	path = web/app/plugins
+	url = git@github.com:ltarasiewicz/lt-blog-plugins.git
