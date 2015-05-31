@@ -1,4 +1,4 @@
-set :application, 'cpkg.tarasiewicz.net'
+set :application, 'cpkg.pl'
 set :repo_url, 'git@github.com:ltarasiewicz/cpkg.git'
 
 # Branch options

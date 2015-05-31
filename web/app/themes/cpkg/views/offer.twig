@@ -1,16 +1,16 @@
 <div class="panel-group" id="accordion">
-    {% for service in services %}        
+    {% for entry in entries %}        
         <div class="panel panel-default">
             <div class="panel-heading">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ loop.index }}" class="">
                     <h4 class="panel-title">                    
-                        {{ service.title }}
+                        {{ entry.title }}
                         <i class="glyphicon glyphicon-menu-down pull-right"></i>                                       
                     </h4>
                 </a>
             </div>
             <div id="collapse{{ loop.index }}" class="panel-collapse collapse">
-                <div class="panel-body">{{ service.content }}</div>
+                <div class="panel-body">{{ entry.content }}</div>
             </div>
         </div>        
     {% endfor %}

@@ -7,6 +7,7 @@
     $templates = array($defaultPageTemplate);
     $args = null;
     $pageTitle = get_the_title();
+    $a = types_render_field('email-address', array());
 
     switch ($pageTitle) {
         case 'Oferta':
@@ -15,9 +16,15 @@
             );
             array_unshift($templates, 'offer.twig');
             break;
+        case 'Zespół':
+            $args = array(
+                'post_type' =>  'member',
+            );
+            array_unshift($templates, 'team.twig');
+            
     }
 
-    $context['services'] = Timber::get_posts($args);
+    $context['entries'] = Timber::get_posts($args, $class = 'CpkgPost');
     Timber::render($templates, $context);
     ?>
 
