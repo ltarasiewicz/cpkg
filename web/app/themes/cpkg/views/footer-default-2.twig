@@ -1,0 +1,12 @@
+<section class="widget">
+    <h5><strong>Usługi prawne</strong></h5>
+    <ul class="list-unstyled">
+        {% for service in services if not break %}
+            <li><a href="{{ oferta.permalink }}usluga/{{ service.id }}">{{ service.title }}</a></li>
+            {% if loop.index == 6 %}
+            {% set break = true %}
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <p class="text-right">...więcej</p>
+</section>

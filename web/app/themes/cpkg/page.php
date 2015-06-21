@@ -7,7 +7,6 @@
     $templates = array($defaultPageTemplate);
     $args = null;
     $pageTitle = get_the_title();
-    $a = types_render_field('email-address', array());
 
     switch ($pageTitle) {
         case 'Oferta':

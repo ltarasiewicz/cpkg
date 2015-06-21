@@ -21,7 +21,9 @@ $sage_includes = [
   'lib/gallery.php',               // Custom [gallery] modifications
   'lib/extras.php',                // Custom functions
   'lib/hooks.php',                 // Custom hooks
-  'lib/extensions.php'             // Extensions, custom classes, e.g. Timber Extenstions
+  'lib/extensions.php',            // Extensions, custom classes, e.g. Timber Extenstions
+  'lib/query-vars.php',            // Add custom query variables
+  'lib/rewrite-rules.php',         // Custom rewrite rules
 ];
 
 foreach ($sage_includes as $file) {

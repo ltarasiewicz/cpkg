@@ -23,6 +23,7 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -42,6 +43,18 @@
       init: function() {
         // JavaScript to be fired on the about us page
       }
+    },
+    'oferta': {
+        init: function() {
+            var getUri = function(href) {
+                var l = document.createElement("a");
+                l.href = href;
+                return l;
+            };
+            var l = getUri(window.location.href);
+            console.debug(l.pathname);
+
+        }
     }
   };
 
