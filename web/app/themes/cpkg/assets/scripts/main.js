@@ -52,7 +52,9 @@
                 return l;
             };
             var l = getUri(window.location.href);
-            console.debug(l.pathname);
+            var regex = new RegExp('|oferta\/usluga\/\d+|');
+            var hasServiceId = regex.test(l.path);
+            console.log(hasServiceId);
 
         }
     }
