@@ -9,7 +9,7 @@
                     </h4>
                 </a>
             </div>
-            <div id="collapse{{ loop.index }}" class="panel-collapse collapse">
+            <div id="collapse{{ loop.index }}" class="panel-collapse collapse {% if query_vars['service_id'] == entry.id %} in {% endif %}">
                 <div class="panel-body">{{ entry.content }}</div>
             </div>
         </div>        

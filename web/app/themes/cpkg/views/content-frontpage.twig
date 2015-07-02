@@ -1,0 +1,7 @@
+{{ home_page.content }}
+<dl>
+{% for hp_service in hp_services %}
+    <dt><h4>{{ hp_service[0] }}</h4></dt>
+    <dd><h4><small>{{ hp_service[1] }}</small></h4></dd>
+{% endfor %}
+</dl>

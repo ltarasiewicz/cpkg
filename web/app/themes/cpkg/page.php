@@ -20,9 +20,12 @@
                 'post_type' =>  'member',
             );
             array_unshift($templates, 'team.twig');
-            
+            break;
     }
 
+    global $query_string;
+    parse_str($query_string, $vars);
+    $context['query_vars'] = $vars;
     $context['entries'] = Timber::get_posts($args, $class = 'CpkgPost');
     Timber::render($templates, $context);
     ?>

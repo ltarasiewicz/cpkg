@@ -1,7 +1,7 @@
 <footer class="content-info" role="contentinfo">
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 col-xs-6">
                 <?php
 
                 $context = Timber::get_context();
@@ -18,7 +18,7 @@
                 }
                 ?>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 col-xs-6">
                 <?php
                 if (is_active_sidebar('sidebar-footer-2')) {
                     dynamic_sidebar('sidebar-footer-2');
@@ -27,7 +27,7 @@
                 }
                 ?>
             </div>    
-            <div class="col-sm-4">
+            <div class="col-sm-4 hidden-xs">
                 <?php
                 if (is_active_sidebar('sidebar-footer-3')) {
                     dynamic_sidebar('sidebar-footer-3');

@@ -1,11 +1,23 @@
 footer {
-    margin-top: 40px;
-    padding: 20px 0 0 0;
-    background-color: #fff;
-    .container {
-      border-top: 1px solid #eee;
+  margin-top: 40px;
+  padding: 20px 0 0 0;
+  background-color: #fff;
+  .container {
+    border-top: 1px solid #eee;
+  }
+  .widget {
+    padding-right: 90px;
+
+    ul > li > a {
+      border-left: 3px solid #6285AF;
+      padding-left: 10px;
+      display: inline-block;
+      text-align: left;
+      &:hover {
+        border-left: 6px solid #6285AF;
+        text-decoration: none;
+      }
     }
-    .widget {
-      padding-right: 90px;
-    }
+
+  }
 }
