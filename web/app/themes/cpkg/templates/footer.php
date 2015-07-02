@@ -8,7 +8,8 @@
                 $context['services'] = Timber::get_posts('post_type=legalservice');
                 $offerPage = get_page_by_title('oferta');
                 $offerPageId = $offerPage->ID;
-                $context['oferta'] = Timber::get_post('page_id=' . $offerPageId);
+                $context['offer'] = Timber::get_post('page_id=' . $offerPageId);
+                $context['pages'] = Timber::get_posts('post_type=page');
 
                 if (is_active_sidebar('sidebar-footer-1')) {
                     dynamic_sidebar('sidebar-footer-1');
@@ -31,7 +32,7 @@
                 if (is_active_sidebar('sidebar-footer-3')) {
                     dynamic_sidebar('sidebar-footer-3');
                 } else {
-                    Timber::render('footer-default-3.twig');
+                    Timber::render('footer-default-3.twig', $context);
                 }
                 ?>
             </div>

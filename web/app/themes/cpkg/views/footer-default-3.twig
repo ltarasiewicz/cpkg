@@ -1,8 +1,8 @@
 <section class="widget">
-    <h5><strong>Usługi prawne</strong></h5>
+    <h5><strong>Linki</strong></h5>
     <ul class="list-unstyled">
         {% for page in pages %}
-        <li>Usługa 2</li>
+        <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
         {% endfor %}
     </ul>
 </section>
