@@ -179,7 +179,7 @@ gulp.task('scripts', ['jshint'], function() {
 gulp.task('fonts', function() {
   return gulp.src(globs.fonts)
     .pipe($.flatten())
-    .pipe(gulp.dest(path.dist + 'fonts/bootstrap'));
+    .pipe(gulp.dest(path.dist + 'fonts/'));
 });
 
 // ### Images

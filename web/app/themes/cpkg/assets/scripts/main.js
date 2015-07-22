@@ -57,6 +57,30 @@
             console.log(hasServiceId);
 
         }
+    },
+    'kontakt' : {
+        init: function() {
+            function initialize() {
+                var mapOptions = {
+                    center: { lat: 53.155487, lng: 23.158595},
+                    zoom: 15
+                };
+                var map = new google.maps.Map(document.getElementById('map-canvas'),
+                    mapOptions);
+
+                var marker = new google.maps.Marker({
+                    position: { lat: 53.155487, lng: 23.158595},
+                    map: map,
+                    title: 'CPKG Radcowie Prawni'
+                });
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+
+        }
     }
   };
 

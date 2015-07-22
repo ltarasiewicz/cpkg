@@ -8,9 +8,18 @@ aside {
   }
 
   h3 {
-    background-color: #95C2D9;
-    padding: 10px;
+    background-color: #31B0D5;
+    padding: 11px;
     margin-bottom: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .wpcf7-form {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
   }
 
 }

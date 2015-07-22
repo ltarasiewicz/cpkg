@@ -63,3 +63,8 @@ define('DISALLOW_FILE_EDIT', true);
 if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
+
+/**
+ * Other Constants
+ */
+define('GOOGLE_API_KEY', getenv('GOOGLE_API_KEY'));

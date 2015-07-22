@@ -9,11 +9,23 @@
   "dependencies": {
     "modernizr": "2.8.2",
     "jquery": "1.11.2",
-    "bootstrap-sass-official": "~3.3.4"
+    "bootstrap-sass-official": "~3.3.4",
+    "fontawesome": "~4.3.0"
   },
   "overrides": {
     "modernizr": {
       "main": "./modernizr.js"
+    },
+    "fontawesome": {
+      "main": [
+        "./fonts/FontAwesome.otf",
+        "./fonts/fontawesome-webfont.eot",
+        "./fonts/fontawesome-webfont.svg",
+        "./fonts/fontawesome-webfont.ttf",
+        "./fonts/fontawesome-webfont.woff",
+        "./fonts/fontawesome-webfont.woff2",
+        "./fonts/scss/font-awesome.scss"
+      ]
     },
     "bootstrap": {
       "main": [
