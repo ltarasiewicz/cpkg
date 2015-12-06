@@ -8,9 +8,10 @@ $args = null;
 $pageTitle = get_the_title();
 
 switch ($pageTitle) {
-    case 'Oferta':
+    case 'Specjalizacje':
         $args = array(
             'post_type' => 'legalservice',
+            'posts_per_page' => -1
         );
         array_unshift($templates, 'offer.twig');
         break;

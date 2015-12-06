@@ -15,7 +15,7 @@ function setup()
 
     // Enable plugins to manage the document title
     // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
-    add_theme_support('title-tag');
+   // add_theme_support('title-tag');
     
     add_theme_support('custom-header');
 

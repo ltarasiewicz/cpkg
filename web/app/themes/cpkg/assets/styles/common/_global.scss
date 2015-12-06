@@ -3,3 +3,12 @@ body {
     height: 100%;
     margin: 0;
 }
+
+.fa-paragraph:before {
+  font-weight: bold;
+  content: '§';
+}
+
+h2 {
+  font-size: 1.2em;
+}

@@ -77,3 +77,13 @@ header {
         float: none;
     }    
 }
+
+div[id*="metaslider"] {
+  .caption {
+    font-size: 1.5em;
+  }
+  .caption-wrap {
+    line-height: 2em;
+    background-color: $deep-blue;
+  }
+}

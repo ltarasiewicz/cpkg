@@ -6,7 +6,7 @@
 
                 $context = Timber::get_context();
                 $context['services'] = Timber::get_posts('post_type=legalservice');
-                $offerPage = get_page_by_title('oferta');
+                $offerPage = get_page_by_title('specjalizacje');
                 $offerPageId = $offerPage->ID;
                 $context['offer'] = Timber::get_post('page_id=' . $offerPageId);
                 $context['pages'] = Timber::get_posts('post_type=page');

@@ -5,10 +5,11 @@ aside {
   form[class*="wpc"] {
     background-color: #F5F9FB;
     padding: 10px;
+    overflow: hidden;
   }
 
   h3 {
-    background-color: #31B0D5;
+    background-color: $deep-blue;
     padding: 11px;
     margin-bottom: 0;
     border-top-left-radius: 3px;
@@ -20,6 +21,18 @@ aside {
   .wpcf7-form {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    min-height: 74px;
+    margin-bottom: 10px;
+    background-color: $cpkg-blue;
+    text-align: left;
+    i {
+      position: relative;
+      top: 35px;
+    }
   }
 
 }

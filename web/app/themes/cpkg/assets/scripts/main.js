@@ -54,8 +54,18 @@
             var l = getUri(window.location.href);
             var regex = new RegExp('|oferta\/usluga\/\d+|');
             var hasServiceId = regex.test(l.path);
-            console.log(hasServiceId);
 
+
+        },
+        finalize: function() {
+            $('.panel.offer-item > a').click(function() {
+                var panel = $(this).children('.panel-heading');
+                if( panel.css('min-height') === '100px'){
+                    panel.css('min-height', '1px');
+                } else {
+                    panel.css('min-height', '100px');
+                }
+            });
         }
     },
     'kontakt' : {

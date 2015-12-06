@@ -1,17 +1,43 @@
-<div class="panel-group" id="accordion">
-    {% for entry in entries %}        
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ loop.index }}" class="">
-                    <h4 class="panel-title">                    
-                        {{ entry.title }}
-                        <i class="fa fa-sort-amount-asc pull-right"></i>
-                    </h4>
+<div class="panel-group offer-accordion" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="row">
+        <div class="col-sm-6">
+            {% set break = false %}
+            {% for entry in entries|slice(0, entries|length/2) %}
+            <div class="panel panel-default default-colour offer-item">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            {{ entry.title }}
+                            <i class="fa fa-sort-amount-asc pull-right"></i>
+                        </h4>
+                    </div>
                 </a>
+                <div id="collapse{{ loop.index }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    {{ entry.content }}
+                </div>
             </div>
-            <div id="collapse{{ loop.index }}" class="panel-collapse collapse {% if query_vars['service_id'] == entry.id %} in {% endif %}">
-                <div class="panel-body">{{ entry.content }}</div>
-            </div>
-        </div>        
-    {% endfor %}
+            {% endfor %}
+        </div>
+        <div class="col-sm-6">
+            {% for entry in entries|slice(entries|length/2) %}
+                <div class="panel panel-default default-colour offer-item">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{ loop.index * entries|length }}" aria-expanded="false" aria-controls="collapse{{ loop.index * entries|length }}">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                {{ entry.title }}
+                                <i class="fa fa-sort-amount-asc pull-right"></i>
+                            </h4>
+                        </div>
+                    </a>
+                    <div id="collapse{{ loop.index * entries|length }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        {{ entry.content }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
+
+<script>
+
+</script>
