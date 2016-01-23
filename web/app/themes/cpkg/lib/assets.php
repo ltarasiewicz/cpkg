@@ -82,6 +82,8 @@ function assets()
     wp_register_script('gmap_api', 'https://maps.googleapis.com/maps/api/js?key=' . GOOGLE_API_KEY);
     wp_enqueue_script('modernizr', asset_path('scripts/modernizr.js'), [], null, true);
     wp_enqueue_script('sage_js', asset_path('scripts/main.js'), ['jquery'], null, true);
+    wp_enqueue_script('my_plugins', asset_path('scripts/my_plugins.js'), ['jquery'], null, false);
+    wp_enqueue_script('letteringjs', asset_path('scripts/Lettering.js'), ['jquery'], null, false);
     wp_enqueue_script('gmap_api');
 }
 

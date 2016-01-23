@@ -27,6 +27,12 @@ switch ($pageTitle) {
         );
         array_unshift($templates, 'contact.twig');
         break;
+    case 'Przedsiębiorcy':
+        $args = array(
+            'post_type' => 'entrepreneur'
+        );
+        array_unshift($templates, 'entrepreneurs.html.twig');
+        break;
     default:
         array_unshift($templates, 'generic.twig');
 }

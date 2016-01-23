@@ -6,6 +6,11 @@
       ],
       "main": true
     },
+    "my_plugins.js": {
+      "files": [
+        "scripts/my_plugins.js"
+      ]
+    },
     "main.css": {
       "files": [
         "styles/main.scss"
@@ -19,6 +24,9 @@
     },
     "jquery.js": {
       "bower": ["jquery"]
+    },
+    "Lettering.js": {
+      "bower": ["letteringjs"]
     },
     "modernizr.js": {
       "bower": ["modernizr"]

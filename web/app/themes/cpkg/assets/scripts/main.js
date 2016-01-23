@@ -22,8 +22,41 @@
     // All pages
     'common': {
       init: function() {
-        // JavaScript to be fired on all pages
 
+
+          needOverlay = function(element) {
+              return(element.offsetHeight < element.scrollHeight);
+          };
+
+
+          $.fn.extend({
+              toggleable: function(options) {
+                  var defaults = {};
+                  return this.each(function() {
+                      $this = $(this);
+
+                      var blurOverlay = $('<div/>', {
+                          class: 'blur-overlay'
+                      });
+
+                      if(needOverlay(this)) {
+                          $this.addClass('has-overlay');
+                          $this.append(blurOverlay);
+                      }
+
+                      $this.filter('.has-overlay').hover(
+                          function() {
+                              blurOverlay.removeClass('blur-overlay');
+                              $(this).addClass('service-open');
+                          },
+                          function() {
+                              blurOverlay.addClass('blur-overlay');
+                              $(this).removeClass('service-open');
+                          }
+                      );
+                  });
+              }
+          });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -60,6 +93,7 @@
         finalize: function() {
             $('.panel.offer-item > a').click(function() {
                 var panel = $(this).children('.panel-heading');
+                var icon = $(this).find('i');
                 if( panel.css('min-height') === '100px'){
                     panel.css('min-height', '1px');
                 } else {
@@ -90,6 +124,13 @@
             $('[data-toggle="tooltip"]').tooltip();
 
 
+        }
+    },
+    'przedsiebiorcy': {
+        finalize: function() {
+            $(document).ready(function() {
+                $('.panel-default.toggleable').toggleable();
+            });
         }
     }
   };

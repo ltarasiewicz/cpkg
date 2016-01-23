@@ -10,7 +10,8 @@
     "modernizr": "2.8.2",
     "jquery": "1.11.2",
     "bootstrap-sass-official": "~3.3.4",
-    "fontawesome": "~4.3.0"
+    "fontawesome": "~4.3.0",
+    "letteringjs": "Lettering.js#~0.7.0"
   },
   "overrides": {
     "modernizr": {

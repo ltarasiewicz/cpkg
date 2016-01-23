@@ -99,8 +99,36 @@
     min-height: 100px;
     color: #fff;
     transition: min-height 0.7s;
+    i {
+      transform: rotate(0deg);
+    }
   }
   .panel-collapse {
     padding: 10px;
   }
+}
+
+.blur-overlay {
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    top: 240px;
+    background-color: #fff;
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+}
+
+.panel-default.toggleable {
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+}
+
+.panel-default.toggleable.service-open {
+  height: auto;
+  overflow: auto;
+  position: relative;
 }
