@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-sm-6">
-        {% for entry in entries %}
+        {% for entry in entries|slice(0, entries|length/2) %}
         <div class="panel panel-default toggleable">
             <div class="panel-heading">
                 <h3 class="panel-title">{{ entry.title }}</h3>
@@ -12,7 +12,7 @@
         {% endfor %}
     </div>
     <div class="col-sm-6">
-        {% for entry in entries %}
+        {% for entry in entries|slice(entries|length/2) %}
             <div class="panel panel-default toggleable" type="text" onload="(this.type = determineClass(this))">
                 <div class="panel-heading">
                     <h3 class="panel-title">{{ entry.title }}</h3>

@@ -23,15 +23,12 @@
     'common': {
       init: function() {
 
-
           needOverlay = function(element) {
               return(element.offsetHeight < element.scrollHeight);
           };
 
-
           $.fn.extend({
               toggleable: function(options) {
-                  var defaults = {};
                   return this.each(function() {
                       $this = $(this);
 
@@ -132,7 +129,21 @@
                 $('.panel-default.toggleable').toggleable();
             });
         }
-    }
+    },
+      'konsumenci': {
+          finalize: function() {
+              $(document).ready(function() {
+                  $('.panel-default.toggleable').toggleable();
+              });
+          }
+      },
+      'spolki': {
+          finalize: function() {
+              $(document).ready(function() {
+                  $('.panel-default.toggleable').toggleable();
+              });
+          }
+      }
   };
 
   // The routing fires all common scripts, followed by the page specific scripts.

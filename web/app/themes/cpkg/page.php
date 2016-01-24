@@ -31,7 +31,19 @@ switch ($pageTitle) {
         $args = array(
             'post_type' => 'entrepreneur'
         );
-        array_unshift($templates, 'entrepreneurs.html.twig');
+        array_unshift($templates, 'targets.html.twig');
+        break;
+    case 'Spółki':
+        $args = array(
+            'post_type' => 'enterprise'
+        );
+        array_unshift($templates, 'targets.html.twig');
+        break;
+    case 'Konsumenci':
+        $args = array(
+            'post_type' => 'consumer'
+        );
+        array_unshift($templates, 'targets.html.twig');
         break;
     default:
         array_unshift($templates, 'generic.twig');

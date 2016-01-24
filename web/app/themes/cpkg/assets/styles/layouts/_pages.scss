@@ -122,13 +122,45 @@
 }
 
 .panel-default.toggleable {
-  height: 280px;
+  transition: max-height 1s;
+  -webkit-transition: max-height 1s;
+  max-height: 280px;
   overflow: hidden;
   position: relative;
 }
 
-.panel-default.toggleable.service-open {
-  height: auto;
+.service-open {
+  max-height: 999px !important;
   overflow: auto;
   position: relative;
+}
+
+.panel-default.toggleable.has-overlay {
+  &:hover {
+    cursor: pointer;
+  }
+  .panel-heading {
+    overflow: hidden;
+    h3 {
+      &:after {
+        font-family: FontAwesome;
+        content: "\f0dd";
+        float: right;
+      }
+    }
+  }
+}
+
+.header-contact-group {
+  .header-contact-icon {
+    line-height: 20px;
+    display: block;
+    padding: 15px;
+    font-size: 20px;
+    color: #fff;
+  }
+  .header-contact-number {
+    padding: 15px 15px 15px 0;
+    color: #fff;
+  }
 }
