@@ -1,15 +1,15 @@
 {% for entry in entries %}
     <div class="row">
-      <div class="col-xs-4">
-        <div class="member-picture">
-          <img class="img-thumbnail" src="{{ entry.thumbnail.src }}" alt="...">
-        </div>
-      </div>
-      <div class="col-xs-8">
+      {#<div class="col-xs-4">#}
+        {#<div class="member-picture">#}
+          {#<img class="img-thumbnail" src="{{ entry.thumbnail.src }}" alt="...">#}
+        {#</div>#}
+      {#</div>#}
+      <div class="col-xs-12">
         <div class="member-description">
             <h4>{{ entry.title }}</h4>
             <h5>{{ entry.types('position') }}</h5>
-            <p>{{ entry.content }}</p>
+            {#<p>{{ entry.content }}</p>#}
             <p><small>Telefon:</small> <span class="label label-info">{{ entry.types('contact-no') }}</span>, <small>Email:</small> <span class="label label-info">{{ entry.types('email-address') }}</span></p>
         </div>
       </div>
