@@ -62,7 +62,7 @@
     // Home page
     'home': {
       init: function() {
-        // JavaScript to be fired on the home page
+
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
@@ -84,6 +84,8 @@
             var l = getUri(window.location.href);
             var regex = new RegExp('|oferta\/usluga\/\d+|');
             var hasServiceId = regex.test(l.path);
+
+            //$('.col-sm-6').sortItemsInContainer('.offer-item');
 
 
         },

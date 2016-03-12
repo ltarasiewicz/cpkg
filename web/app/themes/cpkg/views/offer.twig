@@ -1,11 +1,10 @@
 <div class="panel-group offer-accordion" id="accordion" role="tablist" aria-multiselectable="true">
     <div class="row">
-        <div class="col-sm-6">
-            {% set break = false %}
+        <div class="col-sm-6" id="test">
             {% for entry in entries|slice(0, entries|length/2) %}
-            <div class="panel panel-default default-colour offer-item">
+            <div class="panel panel-default default-colour offer-item" data-priority="{{ entry.priority }}">
                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
-                    <div class="panel-heading" role="tab" id="headingThree">
+                    <div class="panel-heading" role="tab" id="heading{{ loop.index }}">
                         <h4 class="panel-title">
                             {{ entry.title }}
                             <i class="fa fa-sort-amount-asc pull-right"></i>
@@ -20,9 +19,9 @@
         </div>
         <div class="col-sm-6">
             {% for entry in entries|slice(entries|length/2) %}
-                <div class="panel panel-default default-colour offer-item">
+                <div class="panel panel-default default-colour offer-item" data-priority="{{ entry.priority }}">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{ loop.index * entries|length }}" aria-expanded="false" aria-controls="collapse{{ loop.index * entries|length }}">
-                        <div class="panel-heading" role="tab" id="headingThree">
+                        <div class="panel-heading" role="tab" id="heading{{ loop.index * entries|length }}">
                             <h4 class="panel-title">
                                 {{ entry.title }}
                                 <i class="fa fa-sort-amount-asc pull-right"></i>
