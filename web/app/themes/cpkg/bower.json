@@ -11,7 +11,7 @@
     "jquery": "1.11.2",
     "bootstrap-sass-official": "~3.3.4",
     "letteringjs": "Lettering.js#~0.7.0",
-    "font-awesome": "fontawesome#~4.5.0"
+    "font-awesome": "fontawesome#~4.6.3"
   },
   "overrides": {
     "modernizr": {

@@ -43,7 +43,8 @@ var enabled = {
   // Enable static asset revisioning when `--production`
   rev: argv.production,
   // Disable source maps when `--production`
-  maps: !argv.production,
+  //maps: !argv.production,
+    maps: false,
   // Fail styles task on error when `--production`
   failStyleTask: argv.production
 };
@@ -87,7 +88,7 @@ var cssTasks = function(filename) {
           'opera 12'
         ]
       })
-      .pipe($.minifyCss)
+      //.pipe($.minifyCss)
     .pipe(function() {
       return $.if(enabled.rev, $.rev());
     })

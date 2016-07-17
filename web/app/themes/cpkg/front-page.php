@@ -11,7 +11,8 @@
     $homepageServices = preg_split('/\|/', $homepageServicesStr);
 
     $pages = Timber::get_posts([
-        'post_type' => 'page'
+        'post_type' => 'page',
+        'posts_per_page' => -1
     ]);
 
     /** @var TimberPost $page */

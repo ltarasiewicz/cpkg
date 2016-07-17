@@ -1,4 +1,12 @@
 footer {
+
+  @media (max-width: $screen-sm-min) {
+    .widget:first-of-type {
+      text-align: center;
+      padding-right: 0;
+    }
+  }
+
   margin-top: 40px;
   padding: 20px 0 0 0;
   background-color: #fff;
@@ -9,11 +17,13 @@ footer {
     padding-right: 90px;
 
     ul > li > a {
+      color: #333333;
       border-left: 3px solid #6285AF;
       padding-left: 10px;
       display: inline-block;
       text-align: left;
       &:hover {
+        color: #6285AF;
         border-left: 6px solid #6285AF;
         text-decoration: none;
       }

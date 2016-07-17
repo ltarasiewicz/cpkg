@@ -9,13 +9,17 @@ aside {
   }
 
   h3 {
-    background-color: $deep-blue;
     padding: 11px;
     margin-bottom: 0;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     color: #fff;
-    font-size: 16px;
+  }
+
+  .widget {
+    h3 {
+      background-color: $deep-blue;
+    }
   }
 
   .wpcf7-form {

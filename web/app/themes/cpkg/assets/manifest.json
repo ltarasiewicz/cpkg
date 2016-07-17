@@ -33,6 +33,6 @@
     }
   },
   "config": {
-    "devUrl": "http://example.dev"
+    "devUrl": "http://cpkg.local"
   }
 }
